@@ -1,0 +1,40 @@
+# CreditOS MVP File Structure
+
+```txt
+app/
+  (auth)/login/page.tsx
+  (dashboard)/
+    layout.tsx
+    dashboard/page.tsx
+    upload/page.tsx
+    portfolio/page.tsx
+    alerts/page.tsx
+    settings/page.tsx
+  api/
+    analyze/route.ts
+    upload/route.ts
+    stripe/
+      checkout/route.ts
+      webhook/route.ts
+  globals.css
+  layout.tsx
+  page.tsx
+components/
+  sidebar.tsx
+  metric-card.tsx
+  maturity-timeline.tsx
+  risk-score-gauge.tsx
+lib/
+  openai/
+    client.ts
+    prompt-templates.ts
+    analyze-transcript.ts
+  stripe/client.ts
+  supabase/
+    client.ts
+    server.ts
+  sample-transcript.ts
+  types/index.ts
+supabase/schema.sql
+middleware.ts
+```
