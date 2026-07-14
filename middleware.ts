@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-const dashboardPaths = ['/dashboard', '/upload', '/portfolio', '/alerts', '/settings'];
+const dashboardPaths = ['/dashboard', '/upload', '/waterfall', '/portfolio', '/alerts', '/settings'];
 const proOnlyPaths = ['/portfolio', '/alerts'];
 
 async function getUserSession(req: NextRequest) {
@@ -53,5 +53,12 @@ export async function middleware(req: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/dashboard/:path*', '/upload/:path*', '/portfolio/:path*', '/alerts/:path*', '/settings/:path*']
+  matcher: [
+    '/dashboard/:path*',
+    '/upload/:path*',
+    '/waterfall/:path*',
+    '/portfolio/:path*',
+    '/alerts/:path*',
+    '/settings/:path*'
+  ]
 };

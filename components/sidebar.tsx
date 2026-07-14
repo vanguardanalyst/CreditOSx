@@ -2,12 +2,13 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { AlertTriangle, BarChart3, FolderUp, Settings, Wallet } from 'lucide-react';
+import { AlertTriangle, BarChart3, FolderUp, Layers, Settings, Wallet } from 'lucide-react';
 import clsx from 'clsx';
 
 const links = [
   { href: '/dashboard', label: 'Dashboard', icon: BarChart3 },
   { href: '/upload', label: 'Upload Transcript', icon: FolderUp },
+  { href: '/waterfall', label: 'Recovery Waterfall', icon: Layers },
   { href: '/portfolio', label: 'Portfolio Tracker', icon: Wallet },
   { href: '/alerts', label: 'Risk Alerts', icon: AlertTriangle },
   { href: '/settings', label: 'Settings', icon: Settings }
