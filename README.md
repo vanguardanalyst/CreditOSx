@@ -10,6 +10,27 @@ CreditOS is a subscription SaaS MVP for professional credit investors. It ingest
 - Stripe subscriptions
 - Vercel deployment target
 
+## Distress Alpha Engine (Pro)
+A quantitative, cross-capital-structure edge tool for high-yield / distressed investors.
+Unlike the transcript summarizer, this is a deterministic model (no API key required to
+run) that turns a capital structure + fundamentals into an actionable signal:
+
+- **Recovery waterfall** across the full cap stack (bear / base / bull EV scenarios),
+  with attachment leverage through each tranche and the market price overlaid.
+- **Mispricing engine** — market-implied default probability (credit-triangle from
+  spread) vs. a calibrated fundamental hazard model, yielding a fair value and edge
+  in points (CHEAP / FAIR / RICH).
+- **Expected-return decomposition** — probability-weighted carry, pull-to-par,
+  expected loss, LGD and a reward-to-downside ratio.
+- **LME priming-vulnerability score** — scores exposure to uptier / drop-down value
+  leakage (Serta · J.Crew · At Home · Envision playbook) from documentation flags.
+- **Composite alpha score + verdict** (STRONG BUY → AVOID / SHORT) with an
+  auto-generated, defensible thesis.
+- **Live scenario controls** — sliders and doc-flag toggles recompute the signal
+  instantly client-side; optional AI extraction seeds inputs from a transcript.
+
+Core model: `lib/analytics/alpha-engine.ts` · UI: `/alpha` · API: `/api/alpha` (Pro-gated).
+
 ## MVP Features Delivered
 - Transcript upload flow with realistic sample transcript.
 - AI-generated structured outputs:
