@@ -1,12 +1,14 @@
 'use client';
 
 import Link from 'next/link';
+import type { Route } from 'next';
 import { usePathname } from 'next/navigation';
-import { AlertTriangle, BarChart3, FolderUp, Settings, Wallet } from 'lucide-react';
+import { AlertTriangle, BarChart3, FolderUp, Radar, Settings, Wallet } from 'lucide-react';
 import clsx from 'clsx';
 
 const links = [
   { href: '/dashboard', label: 'Dashboard', icon: BarChart3 },
+  { href: '/alpha', label: 'Alpha Engine', icon: Radar },
   { href: '/upload', label: 'Upload Transcript', icon: FolderUp },
   { href: '/portfolio', label: 'Portfolio Tracker', icon: Wallet },
   { href: '/alerts', label: 'Risk Alerts', icon: AlertTriangle },
@@ -27,7 +29,7 @@ export function Sidebar() {
           return (
             <Link
               key={link.href}
-              href={link.href}
+              href={link.href as Route}
               className={clsx(
                 'flex items-center gap-3 rounded-md px-3 py-2 text-sm transition',
                 active ? 'bg-slate-800 text-white' : 'text-slate-300 hover:bg-slate-800/70 hover:text-white'
